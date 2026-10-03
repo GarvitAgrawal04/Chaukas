@@ -1,0 +1,61 @@
+name: Enforce Author Identity
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  check-author:
+    name: Verify commits are by GarvitAgrawal04
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check all commits in this push/PR are by GarvitAgrawal04
+        run: |
+          ALLOWED_EMAIL="garvitagrawal410@gmail.com"
+          ALLOWED_GH_LOGIN="GarvitAgrawal04"
+          FAILED=0
+
+          # For PRs, compare against the base branch.
+          # For direct pushes, check commits pushed (GITHUB_SHA vs its parent).
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE_SHA="${{ github.event.pull_request.base.sha }}"
+            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+          else
+            # For a push, compare against the previous commit on the branch.
+            BASE_SHA="${{ github.event.before }}"
+            HEAD_SHA="${{ github.sha }}"
+            # If before is all zeros (new branch), check only HEAD commit
+            if [ "$BASE_SHA" = "0000000000000000000000000000000000000000" ]; then
+              BASE_SHA="${HEAD_SHA}^"
+            fi
+          fi
+
+          echo "Checking commits from $BASE_SHA..$HEAD_SHA"
+
+          git log "$BASE_SHA..$HEAD_SHA" --format="%H %ae %an" | while IFS=" " read -r commit_sha email name; do
+            echo "---"
+            echo "Commit : $commit_sha"
+            echo "Author : $name <$email>"
+            if [ "$email" != "$ALLOWED_EMAIL" ]; then
+              echo "❌ REJECTED: Author email '$email' is not '$ALLOWED_EMAIL' ($ALLOWED_GH_LOGIN)."
+              FAILED=1
+            else
+              echo "✅ OK"
+            fi
+          done
+
+          if [ "$FAILED" -ne 0 ]; then
+            echo ""
+            echo "One or more commits are not authored by $ALLOWED_GH_LOGIN ($ALLOWED_EMAIL)."
+            echo "Please amend commits to use the correct author identity."
+            exit 1
+          fi
+
+          echo ""
+          echo "All commits verified as $ALLOWED_GH_LOGIN."
