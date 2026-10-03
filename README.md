@@ -4,7 +4,7 @@
 
 <br>
 
-[![tests](https://github.com/kambojmayan-png/chaukas/actions/workflows/test.yml/badge.svg)](https://github.com/kambojmayan-png/chaukas/actions/workflows/test.yml)
+[![tests](https://github.com/GarvitAgrawal04/Chaukas/actions/workflows/test.yml/badge.svg)](https://github.com/GarvitAgrawal04/Chaukas/actions/workflows/test.yml)
 [![license](https://img.shields.io/badge/code-Apache--2.0-blue)](LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs)](package.json)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](tsconfig.json)

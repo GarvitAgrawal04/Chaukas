@@ -246,12 +246,12 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <a
-                  href="https://github.com/kambojmayan-png/chaukas"
+                  href="https://github.com/GarvitAgrawal04/Chaukas"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center min-h-[48px] px-5 py-2.5 bg-[#1A1A1A] text-white font-bold text-xs sm:text-base rounded-[14px] shadow-[0_2px_8px_rgba(26,26,26,0.15)] hover:bg-[#333333] active:scale-[0.98] transition-all max-w-full break-all text-center"
                 >
-                  <span>github.com/kambojmayan-png/chaukas</span>
+                  <span>github.com/GarvitAgrawal04/Chaukas</span>
                   <span className="ml-2 shrink-0">↗</span>
                 </a>
               </div>
