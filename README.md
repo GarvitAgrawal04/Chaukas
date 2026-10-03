@@ -9,10 +9,10 @@
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs)](package.json)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](tsconfig.json)
 [![layout tests](https://img.shields.io/badge/layout%20tests-Playwright-2EAD33)](tests/layout.spec.ts)
-[![Hindi first](https://img.shields.io/badge/Hindi-first-E8590C)](https://chaukas.vercel.app)
+[![Hindi first](https://img.shields.io/badge/Hindi-first-E8590C)](https://chaukas-eight.vercel.app)
 [![voice guided](https://img.shields.io/badge/voice-guided-0F6B4F)](docs/SARAL_UI_SPEC.md)
 
-### [▶ Open the live app](https://chaukas.vercel.app) &nbsp;·&nbsp; [For judges](https://chaukas.vercel.app/judge?lang=en) &nbsp;·&nbsp; [Live numbers](https://chaukas.vercel.app/insights?lang=en) &nbsp;·&nbsp; [Check a message](https://chaukas.vercel.app/check) &nbsp;·&nbsp; [Detailed view](https://chaukas.vercel.app/drill?lang=en)
+### [▶ Open the live app](https://chaukas-eight.vercel.app) &nbsp;·&nbsp; [For judges](https://chaukas-eight.vercel.app/judge?lang=en) &nbsp;·&nbsp; [Live numbers](https://chaukas-eight.vercel.app/insights?lang=en) &nbsp;·&nbsp; [Check a message](https://chaukas-eight.vercel.app/check) &nbsp;·&nbsp; [Detailed view](https://chaukas-eight.vercel.app/drill?lang=en)
 
 Built in one day for **HACKDAY 1.0** (DECODEP) · 20 September 2026 · *Tech for a Better Tomorrow*
 
@@ -59,9 +59,9 @@ The people scammers target most. **Hindi first**, a guide voice that explains ev
 
 | If you have | Do this |
 |---|---|
-| 📱 2 minutes and a phone | Open **[chaukas.vercel.app](https://chaukas.vercel.app)** with the **sound on**, tap ▶ शुरू करें, and go along with the buyer |
-| 💻 A laptop | Open the **[detailed view](https://chaukas.vercel.app/drill?only=olx-qr&lang=en)**: the same practice with the engine log streaming beside it |
-| ✉️ A spam SMS | Paste it into **[/check](https://chaukas.vercel.app/check)** and hear the verdict |
+| 📱 2 minutes and a phone | Open **[chaukas-eight.vercel.app](https://chaukas-eight.vercel.app)** with the **sound on**, tap ▶ शुरू करें, and go along with the buyer |
+| 💻 A laptop | Open the **[detailed view](https://chaukas-eight.vercel.app/drill?only=olx-qr&lang=en)**: the same practice with the engine log streaming beside it |
+| ✉️ A spam SMS | Paste it into **[/check](https://chaukas-eight.vercel.app/check)** and hear the verdict |
 | ⌨️ A terminal | `git clone` → `npm install` → `npm test` |
 
 ## The problem
@@ -213,7 +213,7 @@ sequenceDiagram
   D-->>A: gap = knew-but-fell ÷ knew, always shown with n
 ```
 
-It is computed live and always shown with its sample size on [/insights](https://chaukas.vercel.app/insights?lang=en), next to the fall rate per practice, what people did, how long they hesitated at the keypad, how many red flags they walked past, and whether a second try went better. It is a self-selected hackathon sample, not a representative study, and the page says so.
+It is computed live and always shown with its sample size on [/insights](https://chaukas-eight.vercel.app/insights?lang=en), next to the fall rate per practice, what people did, how long they hesitated at the keypad, how many red flags they walked past, and whether a second try went better. It is a self-selected hackathon sample, not a representative study, and the page says so.
 
 ## For judges
 
